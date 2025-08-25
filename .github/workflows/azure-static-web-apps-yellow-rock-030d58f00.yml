@@ -20,39 +20,25 @@ jobs:
           submodules: true
           lfs: false
           
-      # --- NEW: Node.js setup step ---
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20 # Use a recent LTS version
-          
-      # --- NEW: Build step ---
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build
+          node-version: '20' # Explicitly set Node.js to version 20
+          cache: 'npm' # Optional: Caches node_modules for faster builds
 
-      - name: Build And Deploy
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_ROCK_030D58F00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### Repository/Build Configurations ######
           app_location: "/"
           api_location: ""
-          output_location: "build"
-          ###### End of Repository/Build Configurations ######
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_ROCK_030D58F00 }}
-          action: "close"
+          output_location: "dist" # Vite's default output directory is 'dist'
