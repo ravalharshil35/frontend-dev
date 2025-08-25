@@ -19,12 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
-          
-      - name: Setup Node.js
+
+      # --- Set up a specific, compatible Node.js version ---
+      - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Explicitly set Node.js to version 20
-          cache: 'npm' # Optional: Caches node_modules for faster builds
+          node-version: '22' # Use Node.js 22 LTS or '20.x'
 
       - name: Install dependencies
         run: npm install
