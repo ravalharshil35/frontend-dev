@@ -1,0 +1,101 @@
+.filterInput input{
+    padding: 10px;
+    font-size: 15px !important;
+}
+.table_cells {
+  padding: 10px !important;
+    border: 1px solid rgba(224, 224, 224, 1) !important;
+
+}
+.reset_button{
+  background-color: #182958 !important;
+}
+.table_header{
+  background-color: #19bcee !important;
+  color: #182958 !important;
+}
+
+.popup_box{
+  background-color: #ddf1f3;
+  border-radius: 15px !important;
+}
+.popup_heading{
+  font-weight: 600 !important;
+    font-size: 25px !important;
+    padding: 0px 4px 3px 30px !important;
+    color: #182958 !important;
+}
+.submit_wrapper{
+  width: -webkit-fill-available;
+}
+.clear_button{
+  background: transparent !important;
+    color: #182958 !important;
+    font-weight: 600 !important;
+    border: 1px solid !important;
+    width: 100%;
+}
+.submit_button{
+    background-color: #182958 !important;
+    width: 100%;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+}
+
+.change_password_box{
+    background: #dfefff;
+    width: min-content;
+    position:relative;
+    top: 20%;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    top: 20%;
+}
+.change_button{
+  background: #182958 !important;
+}
+.change_password_textbox{
+  font-size: 20px !important;
+}
+.change_password_checkbox{
+  color: black;
+  font-size: 14px !important;
+}
+.popup_buttons{
+  background-color: #182958 !important;
+}
+.signin_button:disabled{
+  background-color: #b6b5b5  !important;
+  background-image:none ;
+  border: 1px solid #b6b5b5;
+}
+.edit_icon{
+  cursor: default !important;
+}
+.delete_dialog{
+  padding: 20px !important;
+}
+.Date_Container{
+    width:-webkit-fill-available;
+    gap: 10px;
+    display: flex;
+}
+.Date_Container button{
+    background-color: #182958 !important;
+    width: 29px;
+    height: 29px;
+}
+
+.Date_Container button svg{
+    width: 1rem;
+}
+
+.Date_Container .MuiInputLabel-outlined{
+  top: -5px !important;
+}
+
+.Date_Container .Mui-focused{
+  top: 0px !important
+}

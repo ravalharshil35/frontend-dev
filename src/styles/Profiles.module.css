@@ -1,0 +1,43 @@
+.filterInput input{
+    padding: 10px;
+    
+}
+.table_cells {
+  padding: 10px !important;
+  border: 1px solid rgba(224, 224, 224, 1) !important;
+}
+.reset_button{
+  background-color: #182958 !important;
+}
+.table_header{
+  background-color: #19bcee !important;
+  color: #182958 !important;
+}
+.add_profile{
+  padding: 5px 5px 5px 9px !important;
+}
+.popup_wrapper{
+  border-radius: 25px !important;
+}
+.popup_box{
+  background-color: #ddf1f3;
+  border-radius: 15px !important;
+}
+.popup_heading{
+  font-weight: 600 !important;
+    font-size: 25px !important;
+    padding: 0px 4px 3px 30px !important;
+    color: #182958 !important;
+}
+.submit_wrapper{
+  width: -webkit-fill-available;
+}
+.submit_button{
+    background-color: #182958 !important;
+    width: 100%;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+}
+.popup_buttons{
+  background-color: #182958 !important;
+}

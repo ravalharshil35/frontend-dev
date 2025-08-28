@@ -1,0 +1,39 @@
+# This is a Bitbucket Pipelines configuration for a React project.
+# It defines a CI/CD pipeline to build the application and deploy it to Azure.
+# To trigger this pipeline, push a commit to the 'development' branch.
+
+# You can use a specific Docker image as your build environment.
+# 'node:22' is recommended to match your Node.js version.
+image: node:22
+
+pipelines:
+  branches:
+    development:
+      - step:
+          name: Build and Deploy to Azure
+          caches:
+            - node
+          script:
+            # --- DEBUGGING STEP ---
+            # Print a list of all files in the repository to the log.
+            # This will help us confirm if 'package.json' is in the root directory.
+            - echo "Listing files in the repository for debugging:"
+            - ls -R
+
+            # Install project dependencies.
+            - npm install
+
+            # Build the React application for production.
+            - npm run build
+
+            # Use the "atlassian/azure-static-web-apps-deploy" pipe for deployment.
+            - pipe: atlassian/azure-static-web-apps-deploy:2.0.0
+              variables:
+                AZURE_APP_LOCATION: "/"
+                AZURE_OUTPUT_LOCATION: "dist"
+                AZURE_STATIC_WEB_APPS_API_TOKEN: $AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_ROCK_030D58F00
+
+# You can define a custom `node` cache to speed up subsequent builds.
+definitions:
+  caches:
+    node: $BITBUCKET_CLONE_DIR/node_modules

@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 
 .logo {
   height: 6em;
@@ -17,7 +12,12 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+/* .Toastify__close-button {
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  opacity: .5 !important;
+} */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,6 +33,10 @@
   }
 }
 
+td{
+  vertical-align: top !important;
+}
+
 .card {
   padding: 2em;
 }
@@ -40,3 +44,64 @@
 .read-the-docs {
   color: #888;
 }
+
+.MuiFormHelperText-root{
+  color: red !important;
+}
+a{
+  text-decoration: none;
+}
+svg:hover{
+  cursor: pointer;
+}
+
+.actions-icon svg {
+  margin-right: 10px;
+  width: 20px;
+  color: #182958;
+}
+
+.actions-icon svg:last-child{
+  margin-right: 0px;
+}
+
+button{
+    background-color: #19BCD3 !important;
+    color: #fff !important;
+}
+
+/* .Mui-selected{
+  background-color: #182958 !important;
+} */
+.disabledStyle {
+  background-color: #ccc !important;
+  color: #fff;
+  cursor: not-allowed !important;
+}
+
+.swapIcon{
+    color: #182958;
+}
+body {
+  font-family: 'Segoe UI Custom', sans-serif I !important;
+}
+
+.MuiPickersInputBase-sectionsContainer{
+  padding: 10.5px 0 !important;
+}
+.MuiPickersInputBase-sectionsContainer{
+  padding: 10.5px 0 !important;
+}
+
+.MuiInputLabel-outlined{
+  top: -5px !important;
+}
+
+.Mui-focused{
+  top: 0px !important;
+  line-height : 1.4375em !important;
+}
+
+/* .Mui-selected{
+  background-color: rgba(0,0,0,0.04) !important;
+} */

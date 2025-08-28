@@ -1,0 +1,38 @@
+.avatar{
+    width: 90px !important;
+    height: 90px !important;
+}
+.avatar_wrapper{
+    border: 1px solid #dfd4d4 !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+}
+.tab{
+    background: white !important;
+    color: #182958 !important;
+    
+}
+.tab:focus{
+    background-color: #dfefff !important;
+    color: #182958 !important;
+}
+.exportButtons{
+    background-color: #f3f3f3 !important;
+    box-shadow: none !important;
+}
+.answerInputs{
+    border-radius: 0 !important;
+}
+.text_headings{
+    color: #4B5563 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+.text_inputs{
+    color: #182958 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+}
+.accordion_button{
+    background: #f3f3f3 !important;
+}
